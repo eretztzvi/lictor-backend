@@ -1,0 +1,6 @@
+{
+    "mongodb": {
+        "connectionString": "mongodb+srv://amirisrael:yuvalheroku@inspector.gercy.mongodb.net/mikud?retryWrites=true&w=majority"
+    },
+    "domain": "https://mikud.inspectors.co.il/"
+}
