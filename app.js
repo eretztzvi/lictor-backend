@@ -2,6 +2,8 @@ global.config = require(process.env.NODE_ENV === "production" ? "./config-prod.j
 const path = require('path')
 
 const authController = require('./controllers-layer/auth-controller')
+const personsController = require('./controllers-layer/persons-controller')
+const likesController = require('./controllers-layer/likes-controller')
 
 const express = require('express')
 const cors = require('cors');
@@ -16,6 +18,8 @@ app.use(express.static(path.join(__dirname, "./frontend")))
 // ----------------------------------------------------
 // Routes
 app.use('/auth', authController)
+app.use('/persons', personsController)
+app.use('/likes', likesController)
 // ----------------------------------------------------
 
 app.use('*', (req, res) => {
