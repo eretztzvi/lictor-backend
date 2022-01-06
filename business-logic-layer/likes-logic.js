@@ -3,7 +3,7 @@ const LikesModel = require('../models/likes-model')
 
 const getAllUserLikesByIdAsync = async _id => {
     try {
-        const userLikes = await LikesModel.find({ _id }).exec()
+        const userLikes = await LikesModel.find({ user_id: _id }).exec()
         return userLikes
     }
     catch (err) {
